@@ -1,0 +1,29 @@
+.work {
+  &__title {
+    @extend %section-title;
+  }
+  &__list {
+    @extend %list;
+    display: flex;
+    margin-right: 30px;
+  }
+}
+
+.work-card {
+  margin-right: 30px;
+  position: relative;
+  &__content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+  &__title {
+    @extend %h3-like-title;
+    text-align: center;
+    color: $primary-bg-color;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    margin: 0;
+  }
+}

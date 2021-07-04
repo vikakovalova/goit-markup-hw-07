@@ -1,0 +1,131 @@
+.page-footer {
+  background-color: $footer-bg-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.nav {
+  &__logo--footer {
+    @extend .nav__logo;
+    color: $primary-bg-color;
+    margin-right: auto;
+  }
+}
+
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: inherit;
+  color: $primary-bg-color;
+
+  margin-top: 20px;
+}
+
+.footer-contacts {
+  @extend %list;
+  margin-top: 9px;
+  &__item:last-child {
+    margin-top: 9px;
+  }
+  &__link {
+    @extend %link;
+    font-weight: inherit;
+    line-height: 1.714;
+    letter-spacing: inherit;
+    color: rgba(255, 255, 255, 0.6);
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.socials--margin {
+  margin-left: 70px;
+}
+
+.socials__title {
+  @extend %h3-like-title;
+  margin-top: 0;
+  color: $primary-bg-color;
+}
+
+.socials--footer {
+  @extend %list;
+  display: flex;
+  margin-top: 20px;
+}
+
+.socials-item {
+  &__link--footer {
+    @extend .socials-item__link;
+    @extend %link;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &__logo--footer {
+    fill: $primary-bg-color;
+  }
+}
+
+.footer-form {
+  display: flex;
+  margin-left: auto;
+}
+
+.signup-form {
+  min-width: 358px;
+  &__title {
+    @extend %h3-like-title;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: $primary-bg-color;
+  }
+  &__input {
+    @extend %input;
+    padding: 15px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    background-color: inherit;
+    color: $primary-bg-color;
+
+    transition: border $timing-duration $timing-function;
+    &:hover,
+    &:focus {
+      border: 1px solid $accent-color;
+    }
+    &::placeholder {
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.submit {
+  position: relative;
+  display: flex;
+  align-self: flex-end;
+  margin-left: 12px;
+
+  &__button {
+    text-align: unset;
+    padding-left: 29px;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    right: 28px;
+
+    transform: translateY(-50%);
+  }
+}

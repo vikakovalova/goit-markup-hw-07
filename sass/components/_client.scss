@@ -1,0 +1,40 @@
+.client {
+  &__title {
+    @extend %section-title;
+  }
+  &__list {
+    @extend %list;
+    display: inline-flex;
+    margin-right: -30px;
+  }
+}
+
+.client-item {
+  margin-right: 30px;
+  &__link {
+    @extend %link;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 31px;
+    border: 1px solid $social-links-stat;
+    border-radius: 4px;
+
+    transition: border-color $timing-duration $timing-function;
+  }
+  &__link:hover,
+  &__link:focus {
+    border-color: $accent-color;
+  }
+  &__link:hover &__logo,
+  &__link:focus &__logo {
+    fill: $accent-color;
+  }
+  &__logo {
+    height: 60px;
+    width: 106px;
+    fill: $social-links-stat;
+
+    transition: fill $timing-duration $timing-function;
+  }
+}

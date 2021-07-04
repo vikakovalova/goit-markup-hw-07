@@ -1,0 +1,96 @@
+.page-header {
+  border-bottom: 1px solid $header-bottom-border;
+  height: 80px;
+  display: flex;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+// Навигация
+
+.nav {
+  &__logo {
+    @extend .nav__logo;
+  }
+}
+
+.nav--flex-centered {
+  @extend %flex-centered;
+}
+
+.nav-list {
+  display: flex;
+  @extend %list;
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__link {
+    @extend %link;
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+  &__link--current {
+    color: $accent-color;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 4px;
+      bottom: 0;
+      left: 0;
+      background-color: $accent-color;
+      border-radius: 2px;
+      display: block;
+    }
+  }
+}
+
+// Контакты
+
+.contact-list {
+  display: flex;
+  margin-left: auto;
+  @extend %list;
+  &__link {
+    display: flex;
+    align-items: center;
+    @extend %link;
+    color: $text-color;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+  &__link:hover .contact-list__icon,
+  &__link:focus .contact-list__icon {
+    fill: $accent-color;
+  }
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.contact-list__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.contact-list__icon--envelope {
+  @extend .contact-list__icon;
+  width: 16px;
+  height: 12px;
+}
+
+.contact-list__icon--smartphone {
+  @extend .contact-list__icon;
+  width: 10px;
+  height: 16px;
+}
